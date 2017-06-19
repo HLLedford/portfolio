@@ -30,6 +30,46 @@
 			float: none;
 			margin-right:0;
 		}
+		
+		#divRightTabs, #divLeftTabs {
+			width: 50%;
+			display: inline-block;
+		}
+		
+		.nav-pills > li > a{
+			text-align: left;
+		}
+		
+		.nav-pills > li > a:hover{
+			text-align: right;
+		}
+		
+		#divTabContainer {
+			display: flex;
+		}
+		
+		.sticker1, .sticker2 {
+			width:200px;
+			height:200px;
+			 background: url(https://dl.dropbox.com/u/1143870/i/sticker.png) top center no-repeat; 
+			 animation: spin 10s linear infinite;
+			 /*Set our animation play state to paused initially */
+			 animation-play-state: paused; 
+		}
+
+		.sticker1:hover {
+			/* Toggle our animation play state to running when we are hovering over our sticker */
+			animation-play-state: running;
+		}
+		
+		.sticker2:hover {
+			/* Toggle our animation play state to running when we are hovering over our sticker */
+			animation-play-state: running;
+		}
+
+		@keyframes spin {
+			100% {transform: rotate(1turn); }
+		}
 	</style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -44,7 +84,7 @@
 		<div>
 			<div class="jumbotron text-center">
 				<div>
-					<img src="images/headshot.jpg" alt="Profile Picture" height="20%" width="20%" class="img-circle">
+					<img src="images/headshot.jpg" alt="Profile Picture" height="25%" width="25%" class="img-circle">
 					<h1>Harrison Ledford's Portfolio</h1>
 				</div>
 				<nav class="navbar navbar-default" role="navigation">
@@ -83,42 +123,18 @@
 			</div>
 		</div>
 		
-			<div>
-				<div>
-					<div class="panel-group">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" href="#collapse1">Projects</a>
-								</h4>
-							</div>
-							<div id="collapse1" class="panel-collapse collapse">
-								<div class="panel-body">
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id pharetra ipsum. Curabitur lectus metus, pulvinar eleifend imperdiet ut, tempus ornare libero. Ut sed aliquet urna, eu rhoncus nunc. Aenean nec nulla convallis, fermentum eros rutrum, porta sem. Donec et nibh tincidunt, egestas ex vel, vehicula lacus. Aliquam efficitur tellus ac congue luctus. Sed porta neque at ante imperdiet fermentum. Praesent tristique, erat at blandit varius, dui dui maximus risus, non interdum sem turpis et urna. Integer molestie nisi vel iaculis pellentesque. Phasellus felis neque, lacinia eu sagittis a, porta id purus. Integer sagittis malesuada felis id venenatis. Nam facilisis quam ut finibus commodo. Nullam ut malesuada augue, id auctor urna. Duis venenatis nibh nec tempus faucibus. Nulla pharetra nibh eget leo mattis aliquet.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="panel-group">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<h4 class="panel-title">
-									<a data-toggle="collapse" href="#collapse2">Blogs</a>
-								</h4>
-							</div>
-							<div id="collapse2" class="panel-collapse collapse">
-								<div class="panel-body">
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id pharetra ipsum. Curabitur lectus metus, pulvinar eleifend imperdiet ut, tempus ornare libero. Ut sed aliquet urna, eu rhoncus nunc. Aenean nec nulla convallis, fermentum eros rutrum, porta sem. Donec et nibh tincidunt, egestas ex vel, vehicula lacus. Aliquam efficitur tellus ac congue luctus. Sed porta neque at ante imperdiet fermentum. Praesent tristique, erat at blandit varius, dui dui maximus risus, non interdum sem turpis et urna. Integer molestie nisi vel iaculis pellentesque. Phasellus felis neque, lacinia eu sagittis a, porta id purus. Integer sagittis malesuada felis id venenatis. Nam facilisis quam ut finibus commodo. Nullam ut malesuada augue, id auctor urna. Duis venenatis nibh nec tempus faucibus. Nulla pharetra nibh eget leo mattis aliquet.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+		<div id="divTabContainer">
+			<div id="divRightTabs">
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#" class="btn btn-lg" id="aProjects">Projects</a></li>
+					<li><a href="#" class="btn btn-lg" id="aBlog">Blog</a></li>
+				</ul>
 			</div>
+			<div id="divLeftTabs">
+				<div class="sticker1"></div>
+				<div class="sticker2"></div>
+			</div>
+		</div>
 	</div>
 	
 	
@@ -127,15 +143,23 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 	<script>
-		$(".panel-heading").parent('.panel').hover(
-			function() {
-				$(this).children('.collapse').collapse('show');
-			},
+		$(document).ready(function() {
+			$("#aProjects").mouseover(function() {
+				$(".sticker1").css("animation-play-state", "running");
+			});
 			
-			function() {
-				$(this).children('.collapse').collapse('hide');
-			}
-		);
+			$("#aProjects").mouseout(function() {
+				$(".sticker1").css("animation-play-state", "paused");
+			});
+			
+			$("#aBlog").mouseover(function() {
+				$(".sticker2").css("animation-play-state", "running");
+			});
+			
+			$("#aBlog").mouseout(function() {
+				$(".sticker2").css("animation-play-state", "paused");
+			});
+		});
 	</script>
   </body>
 </html>
