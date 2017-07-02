@@ -76,11 +76,11 @@ button.navbar-toggle, .navbar-default .navbar-toggle:focus, .navbar-default .nav
     color: #E7E7E7;
 }
 
-    .nav-pills > li > a:hover, .nav-pills > li > a:focus, .nav-pills > li > a:active {
-        text-align: center;
-        background-color: transparent;
-        color: #E7E7E7;
-    }
+.nav-pills > li > a:hover, .nav-pills > li > a:focus, .nav-pills > li > a:active {
+    text-align: center;
+    background-color: transparent;
+    color: #E7E7E7;
+}
 
 #divTabContainer {
     display: -webkit-box;
@@ -88,42 +88,59 @@ button.navbar-toggle, .navbar-default .navbar-toggle:focus, .navbar-default .nav
     display: flex;
 }
 
-.sticker1, .sticker2 {
+#divContentProjects {
+    display: none;
+    height: 100%;
+}
+
+#divContentBlog {
+    display: none;
+    height: 100%;
+}
+
+#divCurrentProjectOne, #divCurrentProjectTwo, #divCurrentBlogOne, #divCurrentBlogTwo {
+    text-align: center;
+    color: #E7E7E7;
+}
+
+#divCurrentProjectOne > h2, #divCurrentProjectTwo > h2, #aMoreProjects, #divCurrentBlogOne > h2, #divCurrentBlogTwo > h2, #aMoreBlog {
+    text-align: left;
+    margin-left: 5%;
+}
+
+/*.sticker1, .sticker2 {
     width: 200px;
     height: 200px;
     background: url(https://dl.dropbox.com/u/1143870/i/sticker.png) top center no-repeat;
     -webkit-animation: spin 10s linear infinite;
     animation: spin 10s linear infinite;
-    /*Set our animation play state to paused initially */
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
 }
 
-    .sticker1:hover {
-        /* Toggle our animation play state to running when we are hovering over our sticker */
+.sticker1:hover {
         -webkit-animation-play-state: running;
         animation-play-state: running;
-    }
+}
 
-    .sticker2:hover {
-        /* Toggle our animation play state to running when we are hovering over our sticker */
+.sticker2:hover {
         -webkit-animation-play-state: running;
         animation-play-state: running;
-    }
+}*/
 
-@-webkit-keyframes spin {
+/*@-webkit-keyframes spin {
     100% {
         -webkit-transform: rotate(1turn);
         transform: rotate(1turn);
     }
-}
+}*/
 
-@keyframes spin {
+/*@keyframes spin {
     100% {
         -webkit-transform: rotate(1turn);
         transform: rotate(1turn);
     }
-}
+}*/
 
 #imgPortfolio {
     width: 25%;
@@ -140,7 +157,7 @@ button.navbar-toggle, .navbar-default .navbar-toggle:focus, .navbar-default .nav
     background-position: right bottom;
     -webkit-transition: all 1s ease;
     -webkit-transition: all 2s ease;
-    transition: all 2s ease;
+    transition: all 1s ease;
     border-style: solid;
     border-color: #E7E7E7;
     border-radius: 6px;
