@@ -67,34 +67,35 @@
 				</ul>
 			</div>
 			<div id="divLeftTabs">
-				<div class="sticker1"></div>
-				<div class="sticker2"></div>
+                <div id="divContentProjects">
+                    <div id="divCurrentProjectOne">
+                        <h2 id="h2ProjectOne"></h2>
+                        <p id="pProjectOne"></p>
+                    </div>
+                    <div id="divCurrentProjectTwo">
+                        <h2 id="h2ProjectTwo"></h2>
+                        <p id="pProjectTwo"></p>
+                    </div>
+                    <a id="aMoreProjects" href="#" class="btn">More Projects...</a>
+                </div>
+                <div id="divContentBlog">
+                    <div id="divCurrentBlogOne">
+                        <h2>Blog1 Title</h2>
+                        <p>Blog1 Mini-Description</p>
+                    </div>
+                    <div id="divCurrentBlogTwo">
+                        <h2>Blog2 Title</h2>
+                        <p>Blog2 Mini-Description</p>
+                    </div>
+                    <a id="aMoreBlog" href="#" class="btn">More Blogs...</a>
+                </div>
 			</div>
 		</div>
 	</div>
 	
-	
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script>
-		$(document).ready(function() {
-			$("#aProjects").mouseover(function() {
-				$(".sticker1").css("animation-play-state", "running");
-			});
-			
-			$("#aProjects").mouseout(function() {
-				$(".sticker1").css("animation-play-state", "paused");
-			});
-			
-			$("#aBlog").mouseover(function() {
-				$(".sticker2").css("animation-play-state", "running");
-			});
-			
-			$("#aBlog").mouseout(function() {
-				$(".sticker2").css("animation-play-state", "paused");
-			});
-		});
-	</script>
+    <script src="js/index.js"></script>
   </body>
 
 </html>
