@@ -1,34 +1,45 @@
 <Project One>
 <Title>
-Reddit Bot using PRAW API
+Text = Reddit Bot using PRAW API
+Link =
 </Title>
 <Description>
-I recently wrote a bot for Reddit. #TODO
+Text = I recently wrote a bot for Reddit.
+Link =
 </Description>
 <Link>
-#TODO
+Text =
+Link =
 </Link>
 <Image>
-#TODO
+Text =
+Link =
 </Image>
 <Code>
-#TODO
+Text =
+Link =
 </Code>
 </Project One>
+.
 <Project Two>
 <Title>
-Excel User Control for ASP.Net
+Text = Excel User Control for ASP.Net
+Link =
 </Title>
 <Description>
-What's an export to Excel user control with out the added ability to directly give it datatables or datasets? Better yet, why not allow the control to email an individual directly? #TODO
+Text = What's an export to Excel user control with out the added ability to directly give it datatables or datasets? Better yet, why not allow the control to email an individual directly?
+Link =
 </Description>
 <Link>
-#TODO
+Text =
+Link =
 </Link>
 <Image>
-#TODO
+Text =
+Link =
 </Image>
 <Code>
-#TODO
+Text =
+Link =
 </Code>
 </Project Two>
