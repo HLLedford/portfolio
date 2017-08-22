@@ -1,0 +1,74 @@
+html {
+    height: 100%;
+}
+
+body, #divPortfolioContainer {
+    color: #E7E7E7;
+    background-color: #333333;
+    padding: 0;
+    height: 100%;
+}
+
+#imgPortfolio {
+    width: 25%;
+    height: 25%;
+    border: 3px solid #E7E7E7;
+    margin-top: 1%;
+}
+
+#ulPortfolioLinksTop > li > a, #ulPortfolioLinksBottom > li > a {
+    color: #E7E7E7;
+}
+
+#ulPortfolioLinksTop > li > a:hover, #ulPortfolioLinksBottom > li > a:hover {
+    color: #333333;
+}
+
+#divPortfolioHeading {
+    background-color: #3A4560;
+    border-style: solid;
+    border-color: #E7E7E7;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+#navPorfolioNav {
+    background-color: #3A4560;
+    border-style: solid;
+    border-color: #E7E7E7;
+    border-radius: 5px;
+    margin-right: 1%;
+    margin-left: 1%;    
+}
+
+#navCollapseBtn {
+    outline: none;
+    border: 3px solid #E7E7E7;
+}
+
+#navCollapseBtn > span {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(231, 231, 231, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+#divNavLinks ul li a{
+    color: #E7E7E7;
+}
+
+#divNavLinks ul li a:hover{
+    color: #333333;
+}
+
+#divPortfolioBody {
+    background-color: #3A4560;
+    border-style: solid;
+    border-color: #E7E7E7;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 0;
+    height: 100%;
+}
+
+#projects, #about, #blog {
+    padding: 1%;
+}
