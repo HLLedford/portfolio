@@ -1,20 +1,15 @@
 $(document).ready(function() {
     
 //    Projects
-    // $.ajax({
-        // url: "https://api.github.com/repositories/94455851/contents/CMS/Projects",
-        // dataType: "json",
-        // success: function (returndata)
-        // {
-        // alert(returndata[1]["name"]);
-        // }  
-    // });
-    
-    // var divStr = "<div>" + "</div>";
-
-    // var html = $(divStr);
-
-    // html.appendTo($('#projects'))
+    $.ajax({
+        url: "https://api.github.com/repositories/94455851/contents/CMS/Projects",
+        dataType: "json",
+        success: function(returndata) {
+            $.each(returndata, function(index) {
+            	fetchHTML(returndata[index]["download_url"], 1);
+            });
+        }
+    });
     
 //    About Me
     $.ajax({
@@ -28,14 +23,15 @@ $(document).ready(function() {
     
     
 //    Blog
-    // $.ajax({
-        // url: "https://api.github.com/repositories/94455851/contents/CMS/Blog",
-        // dataType: "json",
-        // success: function (returndata)
-        // {
-        // alert(returndata[1]["name"]);
-        // }  
-    // });
+    $.ajax({
+        url: "https://api.github.com/repositories/94455851/contents/CMS/Blog",
+        dataType: "json",
+        success: function(returndata) {
+            $.each(returndata, function(index) {
+            	fetchHTML(returndata[index]["download_url"], 3);
+            });
+        }
+    });
     
 });
 
@@ -44,7 +40,7 @@ function fetchHTML(download_url, section) {
         var html = $(responseText);
         
         if (section == 1) {
-            
+            html.appendTo($('#projects'));
         }
         
         if (section == 2) {
@@ -52,7 +48,7 @@ function fetchHTML(download_url, section) {
         }
         
         if (section == 3) {
-            
+            html.appendTo($('#blog'));
         }
     });
     
