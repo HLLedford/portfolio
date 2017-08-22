@@ -5,21 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-<!--        <link rel="icon" href="images/favicon.ico" />-->
+        <!--<link rel="icon" href="images/favicon.ico" />-->
         <title>Harrison Ledford&#39;s Portfolio</title>
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet" />
-		<!-- Font-Awesome -->
-		<link href="css/font-awesome.min.css" rel="stylesheet" />
+        <!-- Font-Awesome -->
+	<link href="css/font-awesome.min.css" rel="stylesheet" />
+        <link href="css/index.css" rel="stylesheet" />
+        <style></style>
     </head>
     <body>
-		<div class="container-fluid">
-			<div style="text-align: center;">
-				<img src="images/headshot.jpg" class="rounded-circle" alt="Headshot Photo" width="200" height="200">
+		<div id="divPortfolioContainer" class="container-fluid">
+			<div id="divPortfolioHeading" style="text-align: center;">
+				<img id="imgPortfolio" src="images/headshot.jpg" class="rounded-circle" alt="Headshot Photo" width="200" height="200">
 				<h1>Harrison Ledford</h1>
-				<ul class="nav justify-content-center">
+				<ul id="ulPortfolioLinksTop" class="nav justify-content-center">
 					<li class="nav-item">
-						<a href=""tel:8648148125"" class="nav-link"><i class="fa fa-phone" aria-hidden="true"></i> Phone</a>
+						<a href="tel:8648148125" class="nav-link"><i class="fa fa-phone" aria-hidden="true"></i> Phone</a>
 					</li>
 					<li class="nav-item">
 						<a href="mailto:ledfordhl@email.wofford.edu" class="nav-link"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
@@ -28,7 +30,7 @@
 						<a href="#" class="nav-link"><i class="fa fa-file" aria-hidden="true"></i> R&#xE9;sum&#xE9;</a>
 					</li>
 				</ul>
-				<ul class="nav justify-content-center">
+				<ul id="ulPortfolioLinksBottom" class="nav justify-content-center">
 					<li class="nav-item">
 						<a target="_blank" href="https://www.facebook.com/harrison.ledford" class="nav-link"><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</a>
 					</li>
@@ -40,13 +42,12 @@
 					</li>
 				</ul>
 			</div>
-			<hr />
-			<hr />
-			<nav class="navbar navbar-light navbar-toggleable-md">
+            <br />
+			<nav id="navPorfolioNav" class="navbar navbar-light navbar-toggleable-md">
 				<div style="text-align: right;">
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#containerNavbarCenter" aria-controls="containerNavbarCenter" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+					<button id="navCollapseBtn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#divNavLinks" aria-controls="divNavLinks" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 				</div>
-				<div class="collapse navbar-collapse" id="containerNavbarCenter">
+				<div class="collapse navbar-collapse" id="divNavLinks">
 					<ul class="navbar-nav mx-auto" role="tablist" style="width: 100%;">
 						<li class="nav-item">
 							<a class="nav-link" id="projects-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="projects" aria-expanded="false"><h2>Projects</h2></a>
@@ -60,9 +61,8 @@
 					</ul>
 				</div>
 			</nav>
-			<hr />
-			<hr />
-			<div class="tab-content">
+            <br />
+			<div id="divPortfolioBody" class="tab-content">
 				<div role="tabpanel" class="tab-pane fade" id="projects" aria-labelledby="projects-tab" aria-expanded="false">
 				</div>
 				<div class="tab-pane fade active show" id="about" role="tabpanel" aria-labelledby="about-tab" aria-expanded="true">
