@@ -71,3 +71,11 @@ body, #divPortfolioContainer {
 #projects, #about, #blog {
     padding: 1%;
 }
+
+#projects, #blog {
+    text-align: center;
+}
+
+#projects > p, #blog > p {
+    text-align: left;
+}
