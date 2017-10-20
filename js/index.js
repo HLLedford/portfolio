@@ -33,6 +33,16 @@ $(document).ready(function() {
         }
     });
     
+//    Adding Horizontal Line Between each Projects Entry
+    $('#projects > div').each(function() {
+        $(this).append('<hr style="border-color: white;" />');
+    });
+    
+//    Adding Horizontal Line Between each Blog Entry
+    $('#blog > div').each(function() {
+        $(this).append('<hr style="border-color: white;" />');
+    });
+    
 });
 
 function fetchHTML(download_url, section) {
