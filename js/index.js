@@ -32,7 +32,9 @@ $(document).ready(function() {
             });
         }
     });
-    
+});
+
+$(window).load(function(){
 //    Adding Horizontal Line Between each Projects Entry
     $('#projects > div').each(function() {
         $(this).append('<hr style="border-color: white;" />');
@@ -42,7 +44,6 @@ $(document).ready(function() {
     $('#blog > div').each(function() {
         $(this).append('<hr style="border-color: white;" />');
     });
-    
 });
 
 function fetchHTML(download_url, section) {
