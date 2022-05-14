@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Harrison Ledford</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Roboto", sans-serif
+}
+
+.aNoUnderline {
+    text-decoration: none;
+}
+</style>
+<script type="text/javascript">
+  function HideDivs() {
+    let divIds = [ "divWorkExperience", "divEducation", "divProjects" ];
+
+    divIds.forEach(divId => {
+        document.getElementById(divId).style.display = "none";
+    });
+  }
+
+  function DisplaySelection(selection) {
+    HideDivs();
+      
+    document.getElementById('div' + selection.id.substring(1)).style.display = "block";
+  }
+
+function DisplayProject(selection) {
+  HideDivs();
+    
+  document.getElementById('divProjects').style.display = "block";
+
+  selection.click();
+}
+</script>
+</head>
+<body class="w3-dark-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding" style="padding-bottom: 2%;">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-light-grey w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="Logo.PNG" style="width:100%; display: block;" alt="Harrison Ledford">
+          <div class="w3-display-bottomleft w3-container">
+            <a style="text-decoration: none;"  target="_blank" href="https://github.com/hlledford">
+              <i class="fa fa-github" style="font-size:36px;color:#009688"></i> <p style="display: inline-block;">Github</p>
+            </a>
+          </div>
+          <div class="w3-display-bottomright w3-container">
+            <a style="text-decoration: none;" target="_blank" href="https://www.linkedin.com/in/harrison-ledford/">
+              <i class="fa fa-linkedin-square" style="font-size:36px;color:#009688"></i> <p style="display: inline-block;"> LinkedIn</p>
+            </a>
+          </div>
+        </div>
+    
+        <div class="w3-bar-block w3-teal">
+          <a id="aProjects" class="w3-bar-item w3-button" onclick="DisplaySelection(this)" href="#">Projects</a>
+          <a id="aWorkExperience" class="w3-bar-item w3-button" onclick="DisplaySelection(this)" href="#">Work Experience</a>
+          <a id="aEducation" class="w3-bar-item w3-button" onclick="DisplaySelection(this)" href="#">Education</a>
+        </div>
+
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Software Engineer</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Charleston, SC</p>
+          <p><a class="aNoUnderline" href="mailto:hll.harrison.hll@gmail.com"><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>hll.harrison.hll@gmail.com</a></p>
+          <p><a class="aNoUnderline" href="tel:8648148125"><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>864-814-8125</a></p>
+          <hr style="border-color: #009688;">
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+          <p>
+            <span class="w3-tag w3-teal w3-small w3-margin-bottom">C#</span>
+            <span class="w3-tag w3-teal w3-small w3-margin-bottom">Python</span>
+            <span class="w3-tag w3-teal w3-small w3-margin-bottom">Powershell</span>
+            <span class="w3-tag w3-teal w3-small w3-margin-bottom">Java</span>
+            <span class="w3-tag w3-teal w3-small w3-margin-bottom">Javascript</span>
+            <span class="w3-tag w3-teal w3-small w3-margin-bottom">SQL</span>
+            <span class="w3-tag w3-teal w3-small w3-margin-bottom">Angular</span>
+            <span class="w3-tag w3-teal w3-small w3-margin-bottom">Typescript</span>
+          </p>
+        </div>
+      </div>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+        <div id="divProjects" class="w3-container w3-card w3-light-grey w3">
+            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-bars fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
+            <div class="w3-container">
+              <ul style="padding-left: 2%; list-style-type: none;">
+                <li>
+                  <div id="projectOne">
+                    <h3 class="w3-opacity">
+                      <b>CI/CD & Blue-Green Deployments & Automated End to End Testing, Oh My!</b>
+                    </h3>
+                    <div style="border: 2px solid #009688; margin: 2%; margin-top: 0; padding: 2%; background-color: #ccc; border-radius: 5%;">
+                      <p class="w3-text-black">
+                        <i>&nbsp;&nbsp;&nbsp;&nbsp;Continuous integration and continuous deployment (CI/CD) provides for a faster and more adaptive approach to extending and building a 
+                        great solution. Building a CI/CD pipeline that leverages Blue-Green deployments helps ensure new code going out is able to be tested and ran in
+                        an environment that is identical to what customers/users will experience. A very integral part to having a comprehensive and efficient CI/CD implementation is
+                        having regression testing.
+                        <br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Thorough regression testing as code is pushed out to the predecessor server helps ensure the code has been well tested. What is better than thorough regression 
+                        testing? Thorough regression testing that is completely automated. Automating the regression testing for a solution helps ensure reliability and security. This 
+                        helps cut down on errors that are introduced to customers/users.
+                        <br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;For my team at Blackbaud, there were many parts that needed to come together to get CI/CD with Blue-Green deployments running. Luckily Microsoft's Azure has a lot 
+                        of useful information to help set a lot of this up. Having a smart team helps too. I did not drive too much of the Azure setup, but I was able to shadow many of the
+                        pivotal steps needed like configuring the settings within the Azure Portal.
+                        <br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Majority of my work/effort for this project was building out our automated end to end testing. To write these, we used Playwright for Node.js. We used the Playwright 
+                        Test test runner. This allowed us to run tests across multiple browsers, execute tests at the same time, and capture screenshots during execution of testing. We 
+                        ultimately added 31 suites/tests to automate the testing of major functionality within our solution at the time of typing this. I suspect we will have more in the 
+                        future. We have added a Playwright test consideration within our planning of new features.</i>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <hr style="border-color: #009688;">
+                <li>
+                  <div id="projectTwo">
+                    <h3 class="w3-opacity">
+                      <b>Selenium Web Driver to the Rescue</b>
+                    </h3>
+                    <div style="border: 2px solid #009688; margin: 2%; margin-top: 0; padding: 2%; background-color: #ccc; border-radius: 5%;">
+                      <p class="w3-text-black">
+                        <i>&nbsp;&nbsp;&nbsp;&nbsp;Using Python, I built a simple pair of scripts that automate the once manual process used to fetch US Public School and Public District data. It is important to 
+                        have reliable data that you can rely on. For US Schools and Districts, the government provides data a handful of times a year. For some time, my previous project 
+                        manager had to manually navigate to the government site to download the data. This was a tedious process as the website was pretty dated. The data was divided by 
+                        each of the states and territories in the US. Add about 4 clicks to get to each download for each state/territory made for a lot of clicks.
+                        <br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;To help my project manager out, I built a selenium web driver based script in Python that went and downloaded all these files for him. This script did take a bit to 
+                        run. However, the time the script could complete in vs. that of my project manager was not very comparable. Something that would take a couple hours for my project 
+                        manager took about 20 minutes.
+                        <br>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Not only did I automate the downloading of these files, I helped speed up and automate another process my project manager had to do. After downloading the files, 
+                        my project manager would then have to combine them into a singular file. I wrote the script to do this for him as well. These files were just Excel files, but 
+                        the formatting of these files was a bit strange in that there was a graphic within the first few columns/rows. This was pretty simple to get around and the whole 
+                        script took a very tedious process and cut it down tremendously while freeing up my project manager.</i>
+                      </p>
+                    </div>
+                    <p>
+                    </p>
+                  </div>
+                </li>
+                <hr style="border-color: #009688;">
+                <li>
+                  <div id="projectThree">
+                    <h3 class="w3-opacity">
+                      <b>Security</b>
+                    </h3>
+                    <div style="border: 2px solid #009688; margin: 2%; margin-top: 0; padding: 2%; background-color: #ccc; border-radius: 5%;">
+                      <p class="w3-text-black">
+                        <i><b>MFA and Password Changes:</b>
+                          <br>
+                          <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;Before the YourCause teams I was on got to Blackbaud, we did not have Multifactor Authentication (MFA) setup for 
+                          entering our site. After getting to Blackbaud, we had to implement some pretty important security measures like MFA. To implement this functionality, 
+                          we implemented within our logging in process, obviously. We have users pass a code sent to their user account's email. The user can opt to have us remember their 
+                          device which will not prompt them for an MFA code so long as they've entered it in within the last 30 days and have elected to remember their specific device. These 
+                          remembrances can be cleared at any time within the 30 days. After that time, they automatically expire. Although this functionality is limited to only supplying the 
+                          MFA code to the user account's email, the code is easily extendible for expanding to other options like an app. or mobile device.
+                          <br>
+                          <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;I don't want to get into too many details with our password changes for obvious reasons. However, what I can say is that we added a lot more 
+                          complexity to what is an acceptable password. It helps ensure a set number of characters and symbols while also providing additional features only further increase the 
+                          strength and resilience of user passwords within our product.
+                          <br>
+                          <br>
+                          <b>Splunk, Mixpanel, and other Logging:</b>
+                          <br>
+                          <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;Another important security measure we were asked to introduce to our solution was more robust monitoring. We implemented Splunk 
+                          logging so different actions and abilities get logged along with other security related and code related information. This help increase visibility into 
+                          the actions users take. Furthermore, we also adopted a similar technology for our frontend code. We implemented Mixpanel to log and record the steps and 
+                          actions users take and do. Obviously this information is available in the App Insights with the Azure Portal, however, Mixpanel offers a more user friendly 
+                          and customizable solution that can be used for a vast range of purposes including increasing security/visibility within our product.
+                          <br>
+                          <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;Besides these two forms of logging, I introduced a job that scans our API's log table to monitor it so that if so many errors have happened over a certain time range 
+                          or if a there are any fatal errors, we are made aware immediately. This helps ensure we are "actively" monitoring our solution while allowing us to act quick and 
+                          reliably when issues happen to come up.
+                          <br>
+                          <br>
+                          <b>Serving files from our API:</b>
+                          <br>
+                          <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;Who enjoys having floating SAS tokens out there. That isn't good for many reasons but better yet, what if you didn't even need SAS tokens to 
+                          serve files to your users? This is an idea that further allows you to lock down access to the location of files for your product such that only certain IP addresses 
+                          can access it or  maybe just a singular IP address can access it, like the IP address of where your site is hosted.
+                          <br>
+                          <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;In order to do this, I built a set of authenticated endpoints that help to serve files to our users. Instead of having places return links to 
+                          the storage account in Azure, instead, our API returns an endpoint call to itself such that our UI makes a request to our API for the file. This allows us to access 
+                          the file and then serve it ourselves. Luckily our files have a size limit which helps reduce any slowness that could come from doing this for large files.</i>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <br>
+          </div>
+
+      <div id="divWorkExperience" class="w3-container w3-card w3-light-grey w3">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+        <div class="w3-container">
+          <h4 class="w3-opacity"><b>Software Engineer - Blackbaud</b></h4>
+          <h5 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2019 - <span class="w3-tag w3-teal w3-round">Current</span></h5>
+          <p>Primarily a backend/API developer, but I also work wherever my team may need me. Have been contributing to the 
+            frontend along with providing assistance with dev ops related tasks/work and even taking on in-house projects to help 
+            provide value to my team and business.
+          </p>
+          <br>
+          <h6 class="w3-opacity"><b>Skills</b></h6>
+          <p style="padding-left: 2%;">
+            <span class="w3-tag w3-teal w3-small">C#</span>
+            <span class="w3-tag w3-teal w3-small">SQL</span>
+            <span class="w3-tag w3-teal w3-small">Javascript/Typescript</span>
+            <span class="w3-tag w3-teal w3-small">Angular</span>
+            <span class="w3-tag w3-teal w3-small">Azure DevOps</span>
+            <span class="w3-tag w3-teal w3-small">Security</span>
+            <span class="w3-tag w3-teal w3-small">CI/CD</span>
+            <span class="w3-tag w3-teal w3-small">Automation Testing</span>
+            <span class="w3-tag w3-teal w3-small">Postman</span>
+            <span class="w3-tag w3-teal w3-small">Python</span>
+            <span class="w3-tag w3-teal w3-small">Powershell</span>
+            <span class="w3-tag w3-teal w3-small">Git/Source Control</span>
+            <span class="w3-tag w3-teal w3-small">Backend</span>
+            <span class="w3-tag w3-teal w3-small">Frontend</span>
+          </p>
+          <br>
+          <h6 class="w3-opacity"><b>Projects</b></h6>
+          <ul style="padding-left: 2%; list-style-type: none;">
+            <li>
+              Helped enable continuous integration and continuous deployment (CI/CD) in conjunction with Blue-Green deployments. 
+              Further added efficiency by creating automated regression testing suites for Blackbaud-YourCause's Grant Solution. 
+              This ensures our soon to be released code is always tested and functioning before we deliver to customers. 
+              <a href="#projectOne" onclick="DisplayProject(this)" style="color: #009688;">More Info</a>
+            </li>
+            <hr style="border-color: #009688;">
+            <li>
+              Automated the manual process used to fetch and ingest US Public School and Public District data for use in 
+              Blackbaud-YourCause's Grant Solution and CSR (Corporate Social Responsibility) Solution. This alleviated a simple 
+              yet meticulous process so it is done autonomously.
+              <a href="#projectTwo" onclick="DisplayProject(this)" style="color: #009688;">More Info</a>
+            </li>
+            <hr style="border-color: #009688;">
+            <li>
+              Implemented some major security related changes into both Blackbaud-YourCause's Nonprofit Platform Solution 
+              and Grant Solution. This included multifactor authentication (MFA), more rigorous password requirements and 
+              standards, product/application logging and tracking, and enhanced file access security.              
+              <a href="#projectThree" onclick="DisplayProject(this)" style="color: #009688;">More Info</a>
+            </li>
+          </ul>
+          <hr style="border-color: #009688;">
+        </div>
+        <div class="w3-container">
+          <h4 class="w3-opacity"><b>Software Engineer - YourCause (now Blackbaud)</b></h4>
+          <h5 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2018 - Jan 2019</h5>
+          <p>Backend/API developer for YourCause's Nonprofit Solution. Added new functionality/endpoints and refactored/improved 
+            existing functionality/endpoints. I was eventually asked to help YourCause's Grant Product. YourCause was acquired by 
+            Blackbaud in 2019; <a style="color: #009688;" href="https://www.thesitewizard.com/" target="_blank">Blackbaud Buys 
+              YourCause For $157 Million</a>.
+          </p>
+          <br>
+          <h6 class="w3-opacity"><b>Skills</b></h6>
+          <p style="padding-left: 2%;">
+            <span class="w3-tag w3-teal w3-small">C#</span>
+            <span class="w3-tag w3-teal w3-small">SQL</span>
+            <span class="w3-tag w3-teal w3-small">Postman</span>
+            <span class="w3-tag w3-teal w3-small">Python</span>
+            <span class="w3-tag w3-teal w3-small">Powershell</span>
+            <span class="w3-tag w3-teal w3-small">Git/Source Control</span>
+            <span class="w3-tag w3-teal w3-small">Backend</span>
+          </p>
+          <br>
+          <h6 class="w3-opacity"><b>Projects</b></h6>
+          <ul style="padding-left: 2%; list-style-type: none;">
+            <li>
+              Contributed significantly to the data import process that ingested lots of data from various sources to help build 
+              out a robust dataset. This data was integral and used by the other two YourCause products; the Grant solution and 
+              the CSR (Corporate Social Responsibility) Solution.
+            </li>
+          </ul>
+          <hr style="border-color: #009688;">
+        </div>
+        <div class="w3-container">
+          <h4 class="w3-opacity"><b>Oracle Consultant - NTT Data</b></h4>
+          <h5 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2018 - Sept 2018</h5>
+          <p>Helped migrate/move on premiss applications and technologies to the cloud. Had to ensure existing data was kept 
+            functioning along with providing that new data was compatible with both the customers on premiss systems, and those 
+            we were moving to the cloud.
+          </p>
+          <br>
+          <h6 class="w3-opacity"><b>Skills</b></h6>
+          <p style="padding-left: 2%;">
+            <span class="w3-tag w3-teal w3-small">Java</span>
+            <span class="w3-tag w3-teal w3-small">Javascript</span>
+            <span class="w3-tag w3-teal w3-small">Oracle Database</span>
+          </p>
+          <br>
+          <h6 class="w3-opacity"><b>Projects</b></h6>
+          <ul style="padding-left: 2%; list-style-type: none;">
+            <li>
+              Moved a client's major on-premiss systems to the Oracle Cloud Service. This helped provide efficiency and value by 
+              leveraging the abilities/offerings of Oracle Cloud Service compared to the limitations of the client's on-premise
+              technology.
+            </li>
+          </ul>
+          <hr style="border-color: #009688;">
+        </div>
+        <div class="w3-container">
+          <h4 class="w3-opacity"><b>Web Developer - Wofford College</b></h4>
+          <h5 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2016 - May 2018</h5>
+          <p>Maintained and extended the website and web applications of Wofford College. Worked closely with other team members to task 
+            out and break down different assignments and projects.
+          </p>
+          <br>
+          <h6 class="w3-opacity"><b>Skills</b></h6>
+          <p style="padding-left: 2%;">
+            <span class="w3-tag w3-teal w3-small">ASP.NET Web Forms</span>
+            <span class="w3-tag w3-teal w3-small">VB.NET</span>
+            <span class="w3-tag w3-teal w3-small">SQL</span>
+            <span class="w3-tag w3-teal w3-small">HTML/CSS</span>
+            <span class="w3-tag w3-teal w3-small">Javascript/jQuery</span>
+            <span class="w3-tag w3-teal w3-small">Python</span>
+            <span class="w3-tag w3-teal w3-small">Powershell</span>
+            <span class="w3-tag w3-teal w3-small">Git/Source Control</span>
+            <span class="w3-tag w3-teal w3-small">Backend</span>
+            <span class="w3-tag w3-teal w3-small">Frontend</span>
+          </p>
+          <br>
+          <h6 class="w3-opacity"><b>Projects</b></h6>
+          <ul style="padding-left: 2%; list-style-type: none;">
+            <li>
+              Built a streamlined process for the housing lottery for the student body and for student affairs. This controlled 
+              and determined housing assignments for the upcoming year for all students at the college.
+            </li>
+            <hr style="border-color: #009688;">
+            <li>
+              Contributed a significant amount to the Wofford on Call system. This web application was used by Wofford on Call for 
+              collecting donations from alumin and other donors.
+            </li>
+            <hr style="border-color: #009688;">
+            <li>
+              Contributed a significant amount to the incoming freshman portal. This web application was used for new student 
+              orientation to help ensure new incoming students were able to find a roommate, connect with their classmates, sign 
+              up for classes and submit their required documentation.
+            </li>
+            <hr style="border-color: #009688;">
+            <li>
+              Built a web application to allow for the purchasing of tickets to the performances hosted by Wofford College's 
+              theatre program. Allowed for different times, prices and capacities.
+            </li>
+            <hr style="border-color: #009688;">
+            <li>
+              Built administrative tools for faculty and staff to allow for easier class selection, streamlined/automated 
+              administrative duties, and for pulling needed reports/information.
+            </li>
+            <hr style="border-color: #009688;">
+            <li>
+              Helped contribute to the building of the accommodations management for Wofford College. This allowed students to 
+              provide medical exemptions and notices for accommodations the student required while providing an easy to use 
+              administrative section for back office faculty to verify and allow/disallow.
+            </li>
+            <hr style="border-color: #009688;">
+            <li>
+              Built a web application that hosted and offered all the interim classes/offerings that Wofford provided for the 
+              given year. This application allowed students to view which options were still available and what each option 
+              offered along with allowing them to sign up for an option. Interim is a mini-semester at Wofford during January 
+              where students generally take one class. These classes vary in scope, topic and size.
+            </li>
+          </ul>
+        </div>
+        <br>
+      </div>
+
+      <div id="divEducation"  class="w3-container w3-card w3-light-grey">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <div class="w3-container">
+          <h4 class="w3-opacity"><b>Wofford College - Bachelor's Degree</b></h4>
+          <h5 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2014 - 2018</h5>
+          <div>
+            <p style="display: inline-block;" class="w3-large w3-opacity"><b>Majors:</b> </p>
+            <p style="display: inline-block; padding-left: 2%;">
+              <span class="w3-tag w3-teal w3-small">Computer Science</span> <span class="w3-tag w3-teal w3-small">Philosophy</span>
+            </p>
+          </div>
+          <div>
+            <p style="display: inline-block;" class="w3-large w3-opacity"><b>Minors:</b></p>
+            <p style="display: inline-block; padding-left: 2%;">
+              <span class="w3-tag w3-teal w3-small">Math</span>
+              <span class="w3-tag w3-teal w3-small">Art History</span>
+            </p>
+          </div>
+          <hr style="border-color: #009688;">
+        </div>
+        <div class="w3-container">
+          <h4 class="w3-opacity"><b>Publication - Journal of Computing Sciences in Colleges</b></h4>
+          <h5 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016</h5>
+          <p>Titled "Denial of service lab for experiential cybersecurity learning in primarily undergraduate institutions", 
+            this paper is a result of a lab module created from denial of service work I performed while working with 
+            Xenia Mountrouidou and Xiangyang Li.
+          </p>
+          <div style="border: 2px solid #009688; margin: 2%; margin-top: 0; padding: 2%; background-color: #ccc; border-radius: 5%;">
+            <p class="w3-text-black"><i>Cybersecurity is a broad, dynamic, and ever changing field that is difficult to integrate into undergraduate 
+              Computer Science curriculum. The absence of sanitized labs coupled with the requirement of specialized faculty to 
+              teach the subject pose obstacles many undergraduate colleges face in adopting cybersecurity education. In this 
+              paper we describe a pilot lab that is part of the education modules of the project CyberPaths. This project aims 
+              to offer a solution to cybersecurity education for primarily undergraduate liberal arts institutions. We present a 
+              pilot study that tested a denial of service learning lab in a general education course at Wofford College that has 
+              received very positive feedback from students.</i> 
+              <a style="color: #009688;" href="https://dl.acm.org/doi/10.5555/3015063.3015088" target="_blank">Read</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<script>
+  HideDivs();
+  
+  document.getElementById('divProjects').style.display = "block";
+</script>
+</body>
+</html>
