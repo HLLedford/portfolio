@@ -15,6 +15,11 @@ html,body,h1,h2,h3,h4,h5,h6 {
 .aNoUnderline {
     text-decoration: none;
 }
+
+.activeNavLink {
+  color: #000!important;
+  background-color: #ccc!important;
+}
 </style>
 <script type="text/javascript">
   function HideDivs() {
@@ -26,16 +31,22 @@ html,body,h1,h2,h3,h4,h5,h6 {
   }
 
   function DisplaySelection(selection) {
+    let navLinks = [ "aProjects", "aWorkExperience", "aEducation" ];
+
+    navLinks.forEach(navLink => {
+        document.getElementById(navLink).classList.remove("activeNavLink");
+    });
+
     HideDivs();
+
+    document.getElementById(selection.id).classList.add("activeNavLink");;
       
     document.getElementById('div' + selection.id.substring(1)).style.display = "block";
   }
 
 function DisplayProject(selection) {
-  HideDivs();
-    
-  document.getElementById('divProjects').style.display = "block";
-
+  DisplaySelection(document.getElementById("aProjects"));
+  
   selection.click();
 }
 </script>
@@ -88,7 +99,7 @@ function DisplayProject(selection) {
         </div>
     
         <div class="w3-bar-block w3-teal">
-          <a id="aProjects" class="w3-bar-item w3-button" onclick="DisplaySelection(this)" href="#">Projects</a>
+          <a id="aProjects" class="w3-bar-item w3-button activeNavLink" onclick="DisplaySelection(this)" href="#">Projects</a>
           <a id="aWorkExperience" class="w3-bar-item w3-button" onclick="DisplaySelection(this)" href="#">Work Experience</a>
           <a id="aEducation" class="w3-bar-item w3-button" onclick="DisplaySelection(this)" href="#">Education</a>
         </div>
