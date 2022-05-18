@@ -44,14 +44,50 @@ html,body,h1,h2,h3,h4,h5,h6 {
     document.getElementById('div' + selection.id.substring(1)).style.display = "block";
   }
 
-function DisplayProject(selection) {
-  DisplaySelection(document.getElementById("aProjects"));
-  
-  selection.click();
-}
+  function DisplayProject(selection) {
+    DisplaySelection(document.getElementById("aProjects"));
+    
+    selection.click();
+  }
+
+  const getProjectsJson = async url => {
+    const response = await fetch(url);
+
+    if(!response.ok)
+      throw new Error(response.statusText);
+      
+    return response.json();
+  }
+
+  function BuildProjects() {
+    getProjectsJson("https://raw.githubusercontent.com/HLLedford/portfolio/master/CMS/projects.json")
+    .then(data => {
+
+      var projectsList = document.getElementById("ulProjects");
+
+      projectsList.innerHTML = "";
+
+      var templateHTML = '<li><div id="project<ID>"><h3 class="w3-opacity"><b><TITLE></b></h3><div style="border: 2px solid #009688; margin: 2%; margin-top: 0; padding: 2%; background-color: #ccc; border-radius: 5%;"><p class="w3-text-black"><i><BODY></i></p></div></div></li>';
+      var hrHTML = '<hr style="border-color: #009688;">'
+
+      for (var i = 0; i < data.length; i++) {
+        var id = i + 1;
+        var title = data[i].title;
+        var body = data[i].body;
+
+        var item = templateHTML.replace("<ID>", id.toString()).replace("<TITLE>", title).replace("<BODY>", body);
+
+        if (i + 1 != data.length){
+          item = item + hrHTML;
+        }
+
+        projectsList.innerHTML = projectsList.innerHTML + item;
+      }
+    })
+  }
 </script>
 </head>
-<body class="w3-dark-grey">
+<body class="w3-dark-grey" onload="BuildProjects()">
 
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
@@ -114,7 +150,7 @@ function DisplayProject(selection) {
         <div id="divProjects" class="w3-container w3-card w3-light-grey w3">
             <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-bars fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
             <div class="w3-container">
-              <ul style="padding-left: 2%; list-style-type: none;">
+              <ul id="ulProjects" style="padding-left: 2%; list-style-type: none;">
                 <li>
                   <div id="projectOne">
                     <h3 class="w3-opacity">
